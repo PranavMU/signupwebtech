@@ -44,6 +44,12 @@ const handlePassword = (e) => {
 	setPassword(e.target.value);
 	setSubmitted(false);
 };
+function sliceed(){
+    let idx = email.indexOf('@')
+    let web = email.slice(0,idx)
+    console.log(web,idx)
+    return web
+}
 
 function isANumber(str){
     return !/\d/.test(str);
@@ -54,8 +60,8 @@ function containsNumbers(str) {
   }
 const handleSubmit = (e) => {
 	e.preventDefault();
-    console.log(email.includes("@"))
-	if (name === '' || email === '' || password === '') {
+    // console.log(email.includes("@"))
+	if (name === '' || email === '' || password === '' || phone === '') {
 	setError(true);
 	}if(containsNumbers(name)){
         
@@ -85,7 +91,7 @@ const successMessage = () => {
 		style={{
 		display: submitted ? '' : 'none',
 		}}>
-		<h1>Hello {name}  !!</h1>
+		<h1>Hello {sliceed()}  !!</h1>
 	</div>
 	);
 };
@@ -150,7 +156,7 @@ const erroremail = () => {
 return (
 	<div className="form">
 	<div>
-		<h1>User Registration</h1>
+		<h1>Signup</h1>
 	</div>
 
 
