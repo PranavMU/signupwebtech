@@ -1,4 +1,5 @@
-import { useState } from 'react';
+import '../styles/App.css';
+import React, {Component, useState} from "react";
 
 export default function Form() {
 
@@ -154,7 +155,7 @@ const erroremail = () => {
 };
 
 return (
-	<div className="form">
+	<div className="App">
 	<div>
 		<h1>Signup</h1>
 	</div>

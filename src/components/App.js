@@ -4,9 +4,11 @@ import Form from "./form";
 
 const App = () => {
   return (
+    <>
     <div id="main">
-      <Form />
-    </div>
+      <Form> </Form>
+      </div>
+    </>
   )
 }
 
